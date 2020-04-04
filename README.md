@@ -18,7 +18,9 @@
 
 ## Description
 
-A simple chrome extension that converts prices to time worked on minimum wage
+**Fighting consumerism with code!**
+
+Wageit is a simple chrome extension that converts prices on amazon to time worked on minimum wage
 
 ## Setup
 
