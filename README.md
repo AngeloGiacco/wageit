@@ -25,12 +25,19 @@ Wageit is a simple chrome extension that converts prices on amazon to time worke
 ## Setup
 
 Step 1: download the repo as a zip
+
 Step 2: unzip download and save it somewhere memorable
+
 Step 3: go to chrome://extensions
+
 Step 4: enable developer mode
+
 Step 5: select lode unpacked
+
 Step 6: select the unzipped folder
+
 Step 7: go to a product page on amazon.co.uk
+
 Step 8: watch bugs appear
 
 ## Examples
