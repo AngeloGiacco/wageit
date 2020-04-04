@@ -12,15 +12,16 @@
 
 - [Description](#description)
 - [Setup](#setup)
+- [Examples](#example)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
-##Description
+## Description
 
 A simple chrome extension that converts prices to time worked on minimum wage
 
-##Setup
+## Setup
 
 Step 1: download the repo as a zip
 Step 2: unzip download and save it somewhere memorable
@@ -30,6 +31,13 @@ Step 5: select lode unpacked
 Step 6: select the unzipped folder
 Step 7: go to a product page on amazon.co.uk
 Step 8: watch bugs appear
+
+## Examples
+
+![example](images/ex1.png)
+![example](images/ex2.png)
+![example](images/ex3.png)
+![example](images/ex4.png)
 
 ## Contributing
 
