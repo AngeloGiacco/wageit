@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "AngeloGiacco",
+      "name": "Angelo Giacco",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/29235343?v=4",
+      "profile": "https://github.com/AngeloGiacco",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "wageit",
+  "projectOwner": "AngeloGiacco",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
