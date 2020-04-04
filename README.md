@@ -5,8 +5,7 @@
 [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://www.firsttimersonly.com/)
 [![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-blueviolet.svg)](https://opensource.com/article/18/11/reasons-love-open-source)
 ![MadeinUK](https://img.shields.io/badge/Made%20in-UK-green.svg)
-[![license](https://img.shields.io/github/license/:user/:repo.svg)](https://github.com/AngeloGiacco/wageit/LICENSE.md)
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/AngeloGiacco/wageit/blob/master/LICENSE.md)
 
 ## Table of Contents
 
