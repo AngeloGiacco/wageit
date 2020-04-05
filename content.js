@@ -1,5 +1,5 @@
 function priceTime(p) {
-  var minutes = Math.round(p / 0.15); //minimum wage in uk is £8.20 which values one minute at 14p
+  var minutes = Math.round(p / 0.14); //minimum wage in uk is £8.20 which values one minute at 14p
   var hours = 0;
   var string;
   if (minutes >= 60) {
