@@ -1,37 +1,60 @@
-function priceTime(p) {
-  var minutes = Math.round(p / 0.14); //minimum wage in uk is £8.20 which values one minute at 14p
-  var hours = 0;
-  var string;
-  if (minutes >= 60) {
-    while (minutes >= 60) {
-      minutes = minutes - 60;
-      hours++
-    }
-    if (minutes == 0) {
-      string = "This costs "+hours + " hours on minimum wage";
-    } else {
-      string = "This costs "+hours + " hours and " + minutes + " minutes on minimum wage";
-    }
-  } else {
-    string = "This costs " + minutes + " minutes on minimum wage";
+'use strict'
+
+function priceTime(price) {
+  if ((price !== 0 && !price) || isNegative(price)) {
+	return 'Unable to calculate price' 
   }
-  return string;
+  const ukMinimumWage = 0.14
+  const timeInMinutes = Math.round(price / ukMinimumWage)
+  const hours = calculateHours(timeInMinutes)
+  const minutes = calculateMinutes(timeInMinutes, hours) 
+  if (timeInMinutes >= 60) {
+  	return minutes === 0 && hours 
+		? `This costs ${generateHours(hours)} on minimum wage` 
+		: `This costs ${generateHours(hours)} and ${generateMinutes(minutes)}`
+  } 
+	return minutes < 1 
+  		? 'This costs less than a minute on minimum wage'
+	    : `This costs ${generateMinutes(minutes)}`
 }
 
-var prices = document.getElementsByClassName('a-color-price'); //amazon class for prices
-for (var i = 0, l = prices.length; i < l; i++) {
+function isNegative(num) {
+	return Math.sign(num) === -1
+}
+
+function calculateMinutes(minutes, hours) {
+	return hours < 0 ? minutes : minutes - (60 * hours)
+}
+
+function calculateHours(minutes) {		
+	return Math.floor(minutes / 60)
+}
+
+function generateMinutes(minutes) {
+	return minutes < 1 ? `less than a minute on minimum wage` 
+		: `${minutes} ${minutes > 1 ? 'minutes' : 'minute'} on minimum wage`
+}
+
+function generateHours(hours) {
+	return `${hours} ${hours > 1 ? 'hours' : 'hour'}`
+}
+
+const prices = document.getElementsByClassName('a-color-price'); //amazon class for prices
+for (const priceElement of prices) {
   try {
-    var price = prices[i].innerText.split("£")[1];
-    if (Number.isNaN(price)) {
-      continue
-    } else if (typeof price === "undefined") {
-      continue
-    } else {
-      var message = priceTime(price);
-      prices[i].innerText = string;
+    const price = getPriceNumber(priceElement)
+    if (!price) {
+      priceElement.innerText = priceTime(price);
     }
   }
   catch(err){
     continue
   }
+}
+
+function getPriceNumber(price) {
+	if (!price || !price.innerText) {
+		return 0
+	}
+	return Number(price.innerText.split('£')[1].split(' ')[0])
 }
