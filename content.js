@@ -49,6 +49,8 @@ function treeWalkTextNodes() {
 
 const prices = treeWalkTextNodes();
 for (const priceElement of prices) {
+  if(priceElement.innerText.length == 1) continue;
+
   const result = [];
   
   priceElement.innerText.split(' ').forEach((text) => {
