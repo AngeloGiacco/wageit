@@ -49,26 +49,13 @@ function treeWalkTextNodes() {
 
 const prices = treeWalkTextNodes();
 for (const priceElement of prices) {
-  try {
-    const result = [];
-    
-    priceElement.innerText.split(' ').forEach((text) => {
-      if(!text.startsWith("£")) return result.push(text);
-
-      result.push(priceTime(parseInt(text.split("£")[1])));
-    });
-
-    priceElement.innerText = result.join(' ');
-  }
-  catch(err){
-    continue
-  }
-}
-
-function getPriceNumber(price) {
-	if (!price || !price.innerText.trim()) {
-		return 0
-  }
+  const result = [];
   
-	return Number(price.innerText.split('£')[1].split(' ')[0])
+  priceElement.innerText.split(' ').forEach((text) => {
+    if(!text.startsWith("£")) return result.push(text);
+
+    result.push(priceTime(parseInt(text.split("£")[1])));
+  });
+
+  priceElement.innerText = result.join(' ');
 }
