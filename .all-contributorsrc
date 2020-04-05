@@ -14,13 +14,14 @@
         "code"
       ]
     },
-	{
+    {
       "login": "ShaneLee",
       "name": "Shane Lee",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/1313611?s=60&u=b7a16ae2578940ec2594f99f30404d0aed2aef54&v=4",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1313611?v=4",
       "profile": "https://github.com/ShaneLee",
       "contributions": [
-        "code"
+        "code",
+        "test"
       ]
     }
   ],
