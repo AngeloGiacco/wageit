@@ -73,7 +73,7 @@ for (const priceElement of prices) {
 
     for(let currency of currencies) {
       if(text.startsWith(currency.symbol)) {
-        return result.push(priceTime(parseInt(priceElement.innerText.split(currency.symbol)[1]), currency));
+        return result.push(priceTime(parseInt(priceElement.innerText.split(currency.symbol)[1].replace(",", "")), currency));
       }
     }
   });
