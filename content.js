@@ -1,21 +1,35 @@
 'use strict'
 
-function priceTime(price) {
+const currencies = [
+  {
+    symbol: "£",
+    wage: 0.14
+  },
+  {
+    symbol: "$",
+    wage: 0.12
+  },
+  {}
+];
+
+const symbols = currencies.map(c => c.symbol);
+
+function priceTime(price, currency) {
   if ((price !== 0 && !price) || isNegative(price)) {
-	return 'Unable to calculate price' 
+	  return 'Unable to calculate price' 
   }
-  const ukMinimumWage = 0.14
-  const timeInMinutes = Math.round(price / ukMinimumWage)
+
+  const timeInMinutes = Math.round(price / currency.wage)
   const hours = calculateHours(timeInMinutes)
   const minutes = calculateMinutes(timeInMinutes, hours) 
   if (timeInMinutes >= 60) {
-  	return minutes === 0 && hours 
-		? `${generateHours(hours)} on minimum wage` 
-		: `${generateHours(hours)} and ${generateMinutes(minutes)}`
+    return minutes === 0 && hours 
+    ? `${generateHours(hours)} on minimum wage` 
+    : `${generateHours(hours)} and ${generateMinutes(minutes)}`
   } 
-	return minutes < 1 
-  		? 'Less than a minute on minimum wage'
-	    : `${generateMinutes(minutes)}`
+  return minutes < 1 
+      ? 'Less than a minute on minimum wage'
+      : `${generateMinutes(minutes)}`
 }
 
 function isNegative(num) {
@@ -44,7 +58,9 @@ function treeWalkTextNodes() {
   walk = document.createTreeWalker(document.getElementsByTagName("body")[0], NodeFilter.SHOW_TEXT, null, false);
   while (n = walk.nextNode()) result.push(n);
 
-  return result.filter(node => node.textContent.includes("£")).map(r => r.parentElement);
+  return result.filter(node => {
+    return symbols.some(s => node.textContent.includes(s));
+  }).map(r => r.parentElement);
 }
 
 const prices = treeWalkTextNodes();
@@ -54,9 +70,13 @@ for (const priceElement of prices) {
   const result = [];
   
   priceElement.innerText.split(' ').forEach((text) => {
-    if(!text.startsWith("£")) return result.push(text);
+    if(!symbols.some(s => text.startsWith(s))) return result.push(text);
 
-    result.push(priceTime(parseInt(text.split("£")[1])));
+    for(let currency of currencies) {
+      if(text.startsWith(currency.symbol)) {
+        return result.push(priceTime(parseInt(priceElement.innerText.split(currency.symbol)[1]), currency));
+      }
+    }
   });
 
   priceElement.innerText = result.join(' ');
