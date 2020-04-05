@@ -40,6 +40,11 @@ Step 7: go to a product page on amazon.co.uk
 
 Step 8: watch bugs appear
 
+## Running Tests
+
+Open test/SpecRunner.html in a webbrowser
+
+
 ## Examples
 
 ![example](images/ex1.png)
