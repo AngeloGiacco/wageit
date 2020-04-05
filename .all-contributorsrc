@@ -13,6 +13,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ShaneLee",
+      "name": "Shane Lee",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1313611?v=4",
+      "profile": "https://github.com/ShaneLee",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
