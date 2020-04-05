@@ -8,8 +8,7 @@ const currencies = [
   {
     symbol: "$",
     wage: 0.12
-  },
-  {}
+  }
 ];
 
 const symbols = currencies.map(c => c.symbol);
