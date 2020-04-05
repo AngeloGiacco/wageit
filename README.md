@@ -63,7 +63,7 @@ Follow the github flow!
 See [the contributing file](CONTRIBUTING.md)!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Contributors ✨
@@ -76,6 +76,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/AngeloGiacco"><img src="https://avatars1.githubusercontent.com/u/29235343?v=4" width="100px;" alt=""/><br /><sub><b>Angelo Giacco</b></sub></a><br /><a href="https://github.com/AngeloGiacco/wageit/commits?author=AngeloGiacco" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ShaneLee"><img src="https://avatars3.githubusercontent.com/u/1313611?v=4" width="100px;" alt=""/><br /><sub><b>Shane Lee</b></sub></a><br /><a href="https://github.com/AngeloGiacco/wageit/commits?author=ShaneLee" title="Code">💻</a> <a href="https://github.com/AngeloGiacco/wageit/commits?author=ShaneLee" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
