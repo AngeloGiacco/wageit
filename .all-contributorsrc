@@ -23,6 +23,15 @@
         "code",
         "test"
       ]
+    },
+    {
+      "login": "robertwestbury",
+      "name": "Robert Westbury",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/18425863?v=4",
+      "profile": "http://discord.gg/typescript",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
