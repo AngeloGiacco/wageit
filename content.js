@@ -10,12 +10,12 @@ function priceTime(price) {
   const minutes = calculateMinutes(timeInMinutes, hours) 
   if (timeInMinutes >= 60) {
   	return minutes === 0 && hours 
-		? `This costs ${generateHours(hours)} on minimum wage` 
-		: `This costs ${generateHours(hours)} and ${generateMinutes(minutes)}`
+		? `${generateHours(hours)} on minimum wage` 
+		: `${generateHours(hours)} and ${generateMinutes(minutes)}`
   } 
 	return minutes < 1 
-  		? 'This costs less than a minute on minimum wage'
-	    : `This costs ${generateMinutes(minutes)}`
+  		? 'Less than a minute on minimum wage'
+	    : `${generateMinutes(minutes)}`
 }
 
 function isNegative(num) {
@@ -33,28 +33,31 @@ function calculateHours(minutes) {
 function generateMinutes(minutes) {
 	return minutes < 1 ? `less than a minute on minimum wage` 
 		: `${minutes} ${minutes > 1 ? 'minutes' : 'minute'} on minimum wage`
-}
+}``
 
 function generateHours(hours) {
 	return `${hours} ${hours > 1 ? 'hours' : 'hour'}`
 }
 
-const prices = document.getElementsByClassName('a-color-price'); //amazon class for prices
-for (const priceElement of prices) {
-  try {
-    const price = getPriceNumber(priceElement)
-    if (!price) {
-      priceElement.innerText = priceTime(price);
-    }
-  }
-  catch(err){
-    continue
-  }
+function treeWalkTextNodes() {
+  var n, result = [],
+  walk = document.createTreeWalker(document.getElementsByTagName("body")[0], NodeFilter.SHOW_TEXT, null, false);
+  while (n = walk.nextNode()) result.push(n);
+
+  return result.filter(node => node.textContent.includes("£")).map(r => r.parentElement);
 }
 
-function getPriceNumber(price) {
-	if (!price || !price.innerText) {
-		return 0
-	}
-	return Number(price.innerText.split('£')[1].split(' ')[0])
+const prices = treeWalkTextNodes();
+for (const priceElement of prices) {
+  if(priceElement.innerText.length == 1) continue;
+
+  const result = [];
+  
+  priceElement.innerText.split(' ').forEach((text) => {
+    if(!text.startsWith("£")) return result.push(text);
+
+    result.push(priceTime(parseInt(text.split("£")[1])));
+  });
+
+  priceElement.innerText = result.join(' ');
 }
