@@ -14,7 +14,7 @@ const currencies = [
 const symbols = currencies.map(c => c.symbol);
 
 function priceTime(price, currency) {
-  if ((price !== 0 && !price) || isNegative(price)) {
+  if (price == null || isNegative(price)) {
 	  return 'Unable to calculate price'
   }
 
