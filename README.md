@@ -80,7 +80,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/AngeloGiacco"><img src="https://avatars1.githubusercontent.com/u/29235343?v=4" width="100px;" alt=""/><br /><sub><b>Angelo Giacco</b></sub></a><br /><a href="https://github.com/AngeloGiacco/wageit/commits?author=AngeloGiacco" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/AngeloGiacco"><img src="https://avatars1.githubusercontent.com/u/29235343?v=4" width="100px;" alt=""/><br /><sub><b>Angelo Giacco</b></sub></a><br /><a href="https://github.com/AngeloGiacco/wageit/commits?author=AngeloGiacco" title="Code">💻</a> <a href="https://github.com/AngeloGiacco/wageit/commits?author=AngeloGiacco" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://github.com/ShaneLee"><img src="https://avatars3.githubusercontent.com/u/1313611?v=4" width="100px;" alt=""/><br /><sub><b>Shane Lee</b></sub></a><br /><a href="https://github.com/AngeloGiacco/wageit/commits?author=ShaneLee" title="Code">💻</a> <a href="https://github.com/AngeloGiacco/wageit/commits?author=ShaneLee" title="Tests">⚠️</a></td>
     <td align="center"><a href="http://discord.gg/typescript"><img src="https://avatars0.githubusercontent.com/u/18425863?v=4" width="100px;" alt=""/><br /><sub><b>Robert Westbury</b></sub></a><br /><a href="https://github.com/AngeloGiacco/wageit/commits?author=robertwestbury" title="Code">💻</a></td>
   </tr>
