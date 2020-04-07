@@ -7,7 +7,7 @@
 
   "content_scripts": [{
     "js": ["content.js"],
-    "matches": ["https://www.amazon.co.uk/*"]
+    "matches": ["<all_urls>"]
   }]
 
 }

@@ -5,8 +5,7 @@
 [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://www.firsttimersonly.com/)
 [![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-blueviolet.svg)](https://opensource.com/article/18/11/reasons-love-open-source)
 ![MadeinUK](https://img.shields.io/badge/Made%20in-UK-green.svg)
-[![license](https://img.shields.io/github/license/:user/:repo.svg)](LICENSE)
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/AngeloGiacco/wageit/blob/master/LICENSE.md)
 
 ## Table of Contents
 
@@ -19,18 +18,32 @@
 
 ## Description
 
-A simple chrome extension that converts prices to time worked on minimum wage
+**Fighting consumerism with code!**
+
+Wageit is a simple chrome extension that converts prices on amazon to time worked on minimum wage
 
 ## Setup
 
 Step 1: download the repo as a zip
+
 Step 2: unzip download and save it somewhere memorable
+
 Step 3: go to chrome://extensions
+
 Step 4: enable developer mode
+
 Step 5: select lode unpacked
+
 Step 6: select the unzipped folder
+
 Step 7: go to a product page on amazon.co.uk
+
 Step 8: watch bugs appear
+
+## Running Tests
+
+Open test/SpecRunner.html in a webbrowser
+
 
 ## Examples
 
@@ -55,7 +68,7 @@ Follow the github flow!
 See [the contributing file](CONTRIBUTING.md)!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Contributors ✨
@@ -68,6 +81,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/AngeloGiacco"><img src="https://avatars1.githubusercontent.com/u/29235343?v=4" width="100px;" alt=""/><br /><sub><b>Angelo Giacco</b></sub></a><br /><a href="https://github.com/AngeloGiacco/wageit/commits?author=AngeloGiacco" title="Code">💻</a> <a href="https://github.com/AngeloGiacco/wageit/commits?author=AngeloGiacco" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/ShaneLee"><img src="https://avatars3.githubusercontent.com/u/1313611?v=4" width="100px;" alt=""/><br /><sub><b>Shane Lee</b></sub></a><br /><a href="https://github.com/AngeloGiacco/wageit/commits?author=ShaneLee" title="Code">💻</a> <a href="https://github.com/AngeloGiacco/wageit/commits?author=ShaneLee" title="Tests">⚠️</a></td>
+    <td align="center"><a href="http://discord.gg/typescript"><img src="https://avatars0.githubusercontent.com/u/18425863?v=4" width="100px;" alt=""/><br /><sub><b>Robert Westbury</b></sub></a><br /><a href="https://github.com/AngeloGiacco/wageit/commits?author=robertwestbury" title="Code">💻</a></td>
   </tr>
 </table>
 
