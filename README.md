@@ -67,7 +67,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/AngeloGiacco"><img src="https://avatars1.githubusercontent.com/u/29235343?v=4" width="100px;" alt=""/><br /><sub><b>Angelo Giacco</b></sub></a><br /><a href="https://github.com/AngeloGiacco/wageit/commits?author=AngeloGiacco" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/AngeloGiacco"><img src="https://avatars1.githubusercontent.com/u/29235343?v=4" width="100px;" alt=""/><br /><sub><b>Angelo Giacco</b></sub></a><br /><a href="https://github.com/AngeloGiacco/wageit/commits?author=AngeloGiacco" title="Code">💻</a> <a href="https://github.com/AngeloGiacco/wageit/commits?author=AngeloGiacco" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
