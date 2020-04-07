@@ -27,7 +27,7 @@ function priceTime(price, currency) {
     : `${generateHours(hours)} and ${generateMinutes(minutes)}`
   }
   return minutes < 1
-      ? 'Less than a minute on minimum wage'
+      ? 'less than a minute on minimum wage'
       : `${generateMinutes(minutes)}`
 }
 

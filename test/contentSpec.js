@@ -13,11 +13,11 @@ describe('calculating the price', () => {
 	})
 
 	it('should cost less than a minute when the price is 0.01', () => {
-		expect(priceTime(0.01),currencies[0]).toContain('less than a minute')
+		expect(priceTime(0.01,currencies[0])).toContain('less than a minute on minimum wage')
 	})
 
 	it('should cost less than a minute when the price is 0.00', () => {
-		expect(priceTime(0.00),currencies[0]).toContain('less than a minute')
+		expect(priceTime(0.00,currencies[0])).toContain('less than a minute on minimum wage')
 	})
 
 	it('should return unable able to calculate price when price null', () => {
