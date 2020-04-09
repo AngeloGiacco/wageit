@@ -45,22 +45,32 @@ describe('calculating minutes', () => {
 describe('getting the price number from amazon price element', () => {
 	it('should return 1.99 when element inner text is £1.99', () => {
 		const priceElement = { 'innerText' : '£1.99' }
-		expect(getPriceNumber(priceElement,currencies[0].symbol)).toBe(1.99)
+		expect(getPriceNumber(priceElement,currencies[0])).toBe(1.99)
 	})
 
 	it('should return 0.99 when element inner text is £0.99', () => {
 		const priceElement = { 'innerText' : '£0.99' }
-		expect(getPriceNumber(priceElement,currencies[0].symbol)).toBe(0.99)
+		expect(getPriceNumber(priceElement,currencies[0])).toBe(0.99)
 	})
 
 	it('should return 10000 when element inner text is £10,000', () => {
 		const priceElement = { 'innerText' : '£10,000' }
-		expect(getPriceNumber(priceElement,currencies[0].symbol)).toBe(10000)
+		expect(getPriceNumber(priceElement,currencies[0])).toBe(10000)
+	})
+
+	it('should return 10000 when element inner text is Rp10.0000', () => {
+		const priceElement = { 'innerText' : 'Rp 10.000' }
+		expect(getPriceNumber(priceElement,currencies[4])).toBe(10000)
+	})
+
+	it('should return 10000 when element inner text is Rp 10.0000', () => {
+		const priceElement = { 'innerText' : 'Rp 10.000' }
+		expect(getPriceNumber(priceElement,currencies[4])).toBe(10000)
 	})
 
 	it('should return 0.99 when element inner text is £0.99 (40%)', () => {
 		const priceElement = { 'innerText' : '£0.99 (40%)' }
-		expect(getPriceNumber(priceElement,currencies[0].symbol)).toBe(0.99)
+		expect(getPriceNumber(priceElement,currencies[0])).toBe(0.99)
 
 	})
 	it('should return 0 when element inner text is not present', () => {

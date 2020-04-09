@@ -3,11 +3,28 @@
 const currencies = [
   {
     symbol: "£",
-    wage: 0.14
-  },
+    wage: 0.14,
+    UKformat: true
+  } ,
   {
     symbol: "$",
-    wage: 0.12
+    wage: 0.12,
+    UKformat: true
+  } ,
+  {
+    symbol: "￥",
+    wage: 14.57,
+    UKformat: true
+  } ,
+  {
+    symbol: "₽",
+    wage: 202.17,
+    UKformat: false
+  } ,
+  {
+    symbol: "Rp",
+    wage: 444.52,
+    UKformat: false
   }
 ];
 
@@ -62,10 +79,14 @@ function treeWalkTextNodes() {
   }).map(r => r.parentElement);
 }
 
-function getPriceNumber(pE,symbol) {
+function getPriceNumber(pE,c) {
   try {
-    var num = parseFloat(pE.innerText.split(symbol)[1].replace(",", ""));
-    return num;
+    if (c.UKformat) {
+      var num = parseFloat(pE.innerText.split(c.symbol)[1].replace(",", ""));
+    } else {
+      var num = parseFloat(pE.innerText.split(c.symbol)[1].replace(".", "").replace(",","."));
+    }
+      return num;
   }
   catch(err) {
     return 0;
@@ -83,7 +104,7 @@ for (const priceElement of prices) {
 
     for(let currency of currencies) {
       if(text.startsWith(currency.symbol)) {
-        return result.push(priceTime(getPriceNumber(priceElement,currency.symbol), currency));
+        return result.push(priceTime(getPriceNumber(priceElement,currency), currency));
       }
     }
   });
