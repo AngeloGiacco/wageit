@@ -63,9 +63,9 @@ describe('getting the price number from amazon price element', () => {
 		expect(getPriceNumber(priceElement,currencies[4])).toBe(10000)
 	})
 
-	it('should return 10000 when element inner text is Rp 10.0000', () => {
-		const priceElement = { 'innerText' : 'Rp 10.000' }
-		expect(getPriceNumber(priceElement,currencies[4])).toBe(10000)
+	it('should return 10000.12 when element inner text is Rp 10.0000,12', () => {
+		const priceElement = { 'innerText' : 'Rp 10.000,12' }
+		expect(getPriceNumber(priceElement,currencies[4])).toBe(10000.12)
 	})
 
 	it('should return 0.99 when element inner text is £0.99 (40%)', () => {

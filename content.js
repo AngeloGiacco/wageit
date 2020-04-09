@@ -86,7 +86,7 @@ function getPriceNumber(pE,c) {
     } else {
       var num = parseFloat(pE.innerText.split(c.symbol)[1].replace(".", "").replace(",","."));
     }
-      return num;
+    return num;
   }
   catch(err) {
     return 0;
