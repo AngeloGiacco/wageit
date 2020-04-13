@@ -33,6 +33,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "afrmtbl",
+      "name": "afrmtbl",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/24992665?v=4",
+      "profile": "https://github.com/afrmtbl",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
